@@ -1,0 +1,32 @@
+@use '../abstracts/abstracts' as a;
+
+.presentation{
+    border-bottom: 1px solid a.$grey;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+        
+    @include a.breakpoint(tablet) {
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    @include a.breakpoint(desktop){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    &__title{
+        margin-bottom: 15px;
+
+    }
+    &__description{
+        margin-bottom: 15px;
+        @include a.breakpoint(tablet){
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+   
+}

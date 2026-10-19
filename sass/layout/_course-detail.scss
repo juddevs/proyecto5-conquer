@@ -1,0 +1,70 @@
+@use '../abstracts/abstracts' as a;
+
+.course-detail{
+    @include a.breakpoint(desktop){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "title media"
+        "description media";
+        align-items: center;
+        max-width: 1110px;
+        margin: 40px auto;
+        gap:20px 40px;
+    }
+
+    &__title{
+        margin-bottom: 22px;
+        @include a.breakpoint(tablet){
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        @include a.breakpoint(desktop){
+            grid-area: title;
+            text-align: left;
+            margin:0;
+        }
+    }
+
+
+    &__description{
+        margin-bottom: 15px;
+        @include a.breakpoint(tablet){
+            text-align: start;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include a.breakpoint(desktop){
+            grid-area: description;
+            text-align: left;
+            margin:0;
+            max-width: none;
+            align-self: start;
+        }
+    }
+
+    &__media{
+        @include a.breakpoint(desktop){
+            grid-area: media;
+            text-align: center;
+            margin:0;
+        }
+    }
+
+    &__image{
+        border-radius: 20px;
+        @include a.breakpoint(tablet){
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+    }
+
+    &__caption{
+        margin-bottom: 15px;
+        @include a.breakpoint(tablet){
+            margin-botton:40px;
+        }
+    }
+}

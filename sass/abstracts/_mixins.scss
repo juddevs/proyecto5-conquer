@@ -1,0 +1,41 @@
+@use 'variables' as v;
+
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: v.$bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: v.$bp-desktop) {
+      @content;
+    }
+  }
+}
+
+//reset-list:
+@mixin reset-list{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  text-align: center;
+}
+
+//tipografía para texto introductorio
+@mixin text-lead{
+  font-size: 17px;
+  line-height: 1.6;
+  color: v.$grafito;
+  @include breakpoint(tablet){
+    font-size: 20px;
+  }
+}
+
+//cards
+@mixin surface($radius:v.$border-radius-img){
+  background-color:v.$white;
+  border:v.$border-card;
+  border-radius: $radius;
+  padding: 15px;
+}

@@ -1,0 +1,21 @@
+@use '../abstracts/abstracts' as a;
+
+.footer{
+    background-color: a.$grafito;
+    padding:20px;
+    text-align: center;
+   
+
+    &__copy{
+        font-size: 14px;
+        color: a.$light-grey;
+
+    }
+    &__link{
+        text-decoration: none;
+        color: a.$white;
+        &:hover, &:active{
+            color:a.$ambar;
+        }
+    }
+}

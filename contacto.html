@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacta con nosotros | Academia Conquer Blocks</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Déjanos tu mensaje">
+
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <header class="header">
+  <a class="header__logo" href="index.html">
+    <img width="150" height="14" src="img/common/logotipo_conquer_crypto.png" alt="Logotipo Conquer Blocks" class="header__logo-img">
+  </a>
+
+  <input type="checkbox" id="menu-toggle" class="header__checkbox" aria-label="Abrir o cerrar menú">
+
+  <label for="menu-toggle" class="header__hamburger">
+    <span class="header__hamburger-bar"></span>
+    <span class="header__hamburger-bar"></span>
+    <span class="header__hamburger-bar"></span>
+  </label>
+
+  <nav class="header__nav" id="primary-navigation">
+    <ul class="header__menu">
+      <li class="header__item"><a class="header__link" href="index.html">Home</a></li>
+      <li class="header__item"><a class="header__link" href="quienes_somos.html">Quiénes somos</a></li>
+      <li class="header__item"><a class="header__link" href="cursos/cursos.html">Cursos</a></li>
+      <li class="header__item"><a class="header__link" href="blog/blog.html">Blog</a></li>
+      <li class="header__item"><a class="header__link" href="registro.html">Registro</a></li>
+      <li class="header__item"><a class="header__link" href="login.html">Login</a></li>
+      <li class="header__item"><a class="header__link" href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main class="contact-page">
+  <div class="container">
+    <h1 class="contact-page__title">Contacta con nosotros</h1>
+
+    <section class="contact-map">
+      <iframe class="contact-map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194348.23369164893!2d-3.8443458807353976!3d40.437837282503054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid!5e0!3m2!1ses!2ses!4v1787027154767!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </section>
+
+    <section class="contact-form">
+      <h2 class="contact-form__title">Contáctanos</h2>
+      <p class="contact-form__description">Contacta con nosotros y haznos las consultas que necesites</p>
+      
+      <form class="form--contact" action="" method="post">
+      
+        <div class="form__group">
+          <label class="form__label" for="name">Nombre completo: </label>
+          <input class="form__input" type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="telefono">Teléfono: </label>
+          <input class="form__input" type="tel" id="telefono" name="telefono">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="email">Email: </label>
+          <input class="form__input" type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="mensaje">Mensaje:</label>
+          <textarea class="form__textarea" name="mensaje" id="mensaje" cols="50" rows="8" placeholder="Escribe tu mensaje"></textarea>
+        </div> 
+
+        <div class="form__group form__group--checkbox">
+          <label class="form__checkbox-label">
+            <input class="form__checkbox" type="checkbox" name="condiciones" required>
+            Acepto los 
+            <a class="link" href="aviso-legal.html">Términos y Condiciones</a>
+          </label>
+        </div>
+
+        <button class="btn btn--primary" type="submit">Enviar</button>
+
+      </form>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <p class="footer__copy">© Conquer Blocks 2026 - <a class="footer__link" href="aviso-legal.html">Aviso legal</a></p>
+</footer>
+</body>
+
+</html>

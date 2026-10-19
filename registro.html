@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Regístrate para comenzar en uno de nuestros cursos">
+
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <header class="header">
+  <a class="header__logo" href="index.html">
+    <img width="150" height="14" src="img/common/logotipo_conquer_crypto.png" alt="Logotipo Conquer Blocks" class="header__logo-img">
+  </a>
+
+  <input type="checkbox" id="menu-toggle" class="header__checkbox" aria-label="Abrir o cerrar menú">
+
+  <label for="menu-toggle" class="header__hamburger">
+    <span class="header__hamburger-bar"></span>
+    <span class="header__hamburger-bar"></span>
+    <span class="header__hamburger-bar"></span>
+  </label>
+
+  <nav class="header__nav" id="primary-navigation">
+    <ul class="header__menu">
+      <li class="header__item"><a class="header__link" href="index.html">Home</a></li>
+      <li class="header__item"><a class="header__link" href="quienes_somos.html">Quiénes somos</a></li>
+      <li class="header__item"><a class="header__link" href="cursos/cursos.html">Cursos</a></li>
+      <li class="header__item"><a class="header__link" href="blog/blog.html">Blog</a></li>
+      <li class="header__item"><a class="header__link" href="registro.html">Registro</a></li>
+      <li class="header__item"><a class="header__link" href="login.html">Login</a></li>
+      <li class="header__item"><a class="header__link" href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main class="auth-page">
+  <div class="container">
+    <section class="form-card">
+      <h1 class="form-card__title">Regístrate</h1>
+      <p class="form-card__description">Necesitamos que te registres para poder acceder a nuestra academia.</p>
+
+      <form class="form" action="" name="registro" method="post" enctype="multipart/form-data">
+
+        <div class="form__group">
+          <label class="form__label" for="nombre">Nombre completo:</label>
+          <input class="form__input" type="text" id="nombre" name="nombre" maxlength="50" required>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="data">Fecha de nacimiento:</label>
+          <input class="form__input" type="date" id="data" name="fecha_nacimiento">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="email">Email:</label>
+          <input class="form__input" type="email" id="email" name="email" maxlength="50" required>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="address">Dirección:</label>
+          <input class="form__input" type="text" id="address" name="direccion">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="web">Página web:</label>
+          <input class="form__input" type="url" id="web" name="web">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="photo">Foto:</label>
+        <input class="form__file" type="file" id="photo" name="foto">
+        </div>
+
+        <div class="form__group form__group--full">
+          <label class="form__label" for="biografia">Biografía:</label>
+          <textarea class="form__textarea" name="biografia" id="biografia" rows="5" placeholder="Escribe tu biografía"></textarea>
+        </div>
+
+        <button class="btn btn--primary" type="submit">Enviar</button>
+
+      </form>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <p class="footer__copy">© Conquer Blocks 2026 - <a class="footer__link" href="aviso-legal.html">Aviso legal</a></p>
+</footer>
+</body>
+
+</html>

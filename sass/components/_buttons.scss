@@ -1,0 +1,45 @@
+@use '../abstracts/abstracts' as a;
+
+.btn{
+    width: 100%;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 15px;
+    border:none;
+    cursor:pointer;
+    transition: background-color 0.2s ease;
+    @include a.breakpoint(tablet){
+        width: auto;
+    }
+
+    &--primary{
+        background-color: a.$color-primary;
+        color: a.$white;
+        &:hover{
+            background-color: a.$color-primary-hover;
+        }
+        @include a.breakpoint(tablet){
+            min-width: 340px;
+            padding-bottom: 15px;
+            
+        }
+    }
+
+    &--secondary{
+        background-color: a.$ambar;
+        color: a.$white;
+        &:hover{
+            background-color: a.$orange;
+        }
+        
+        @include a.breakpoint(tablet){
+            min-width: 340px;
+            padding-bottom: 15px;
+            
+        }
+    }
+}

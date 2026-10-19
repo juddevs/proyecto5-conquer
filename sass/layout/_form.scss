@@ -1,0 +1,119 @@
+@use '../abstracts/abstracts' as a;
+
+.form-card{
+    @include a.surface;
+    padding:20px;
+    margin:5px;
+    @include a.breakpoint(tablet){
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        padding:40px;
+    }
+    @include a.breakpoint(desktop){
+        max-width: 1110px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title{
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    &__description{
+        margin-bottom:15px;
+        text-align: center;
+        @include a.breakpoint(desktop){
+            margin-bottom: 30px;
+        }
+    }
+    &--login{
+        max-width: 600px;
+        padding-bottom: 60px;
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    @include a.breakpoint(tablet){
+        gap:30px;
+    }
+    @include a.breakpoint(desktop){
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+    }
+
+    &--login{
+        @include a.breakpoint(desktop){
+            display: flex;
+            flex-direction: column;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    &--contact{
+          @include a.breakpoint(desktop){
+            display: flex;
+            flex-direction: column;
+            padding-left: 40px;
+            padding-right: 40px;
+            gap:15px;
+        }
+    }
+
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+
+        &--full{
+            @include a.breakpoint(desktop){
+                grid-column:span 2;
+            }
+        }
+    }
+
+    &__label{
+        font-size: 16px;
+        font-weight: 600;
+        color: a.$black;
+    }
+
+    &__input, &__textarea{
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 16px;
+        border: 1px solid a.$grey;
+        border-radius: 8px;
+        font-family: a.$font-body;
+     }
+
+    &__fieldset{
+        border:none;
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+    }
+    &__legend{
+        font-family: a.$font-body;
+        font-size: 15px;
+        margin-bottom: 40px;
+        font-weight: 300;
+        color: a.$dark-grey;
+        text-align: center;
+    }
+ }
+
+ .btn{
+    @include a.breakpoint(desktop){
+       grid-column:span 2;
+       max-width: 700px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+ }

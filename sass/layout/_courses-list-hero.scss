@@ -1,0 +1,15 @@
+@use '../abstracts/abstracts' as a;
+
+.courses-list-hero{
+    &__title{
+        margin-bottom: 15px;
+    }
+
+    &__description{
+         margin-bottom: 30px;
+    }
+    @include a.breakpoint(tablet){
+        text-align: center;
+    }
+
+}

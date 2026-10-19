@@ -1,0 +1,56 @@
+@use '../abstracts/abstracts' as a;
+
+.card{
+    margin-bottom:15px;
+    @include a.surface;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(a.$black, .06);  
+    transition:transform .25s ease, box-shadow .25s ease;
+
+    @include a.breakpoint(tablet){
+        text-align: left;
+        padding: 20px;
+    }
+
+    &__arrow{
+        display: inline-block;
+        transition: transform .25s ease;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(a.$black, .15);
+        .card__arrow { 
+            transform: translateX(4px); 
+        }
+    }
+
+    &__link{
+        margin-top:auto;
+        font-weight: 600;
+        color: a.$color-primary;
+        text-decoration: none;
+        &::after{
+            content:'';
+            position:absolute;
+            inset:0;
+        }
+    }
+    &__title{
+        margin-bottom: 10px;
+        @include a.breakpoint(tablet){
+            margin-bottom: 15px;
+        }
+    }
+    &__description{
+        margin-bottom: 10px;
+        @include a.breakpoint(tablet){
+            margin-bottom: 15px;
+        }
+    }
+
+    
+}

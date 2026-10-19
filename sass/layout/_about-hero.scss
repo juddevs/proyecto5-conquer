@@ -1,0 +1,43 @@
+@use '../abstracts/abstracts' as a;
+
+.about-hero{
+    padding-bottom: 20px;
+    margin-bottom:30px;
+    border-bottom: 1px solid a.$grey;
+    &__title{
+        margin-bottom: 20px;
+        @include a.breakpoint(tablet){
+            text-align: center;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        @include a.breakpoint(desktop){
+            max-width: 850px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__description{
+        margin-bottom: 15px;
+        @include a.breakpoint(desktop){
+            max-width: 1000px;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    &__image{
+        margin-bottom: 15px;
+        @include a.breakpoint(tablet){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left:auto;
+            margin-right: auto;
+        }
+    }
+    &__caption{
+        margin-top:8px;
+        margin-bottom: 16px;
+    }
+}

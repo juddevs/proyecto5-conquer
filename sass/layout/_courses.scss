@@ -1,0 +1,47 @@
+@use '../abstracts/abstracts' as a;
+
+.courses{
+    padding-bottom: 20px;
+    border-bottom: 1px solid a.$grey;
+    margin-bottom: 30px;
+    @include a.breakpoint(tablet){
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__title{
+        margin-bottom: 15px;
+        @include a.breakpoint(tablet){
+            text-align: center;
+            margin-right:auto;
+            margin-left: auto;
+        }
+    }
+    &__description{
+        margin-bottom: 15px;
+        @include a.breakpoint(tablet){
+            text-align: center;
+            margin-right:auto;
+            margin-left: auto;
+            margin-bottom: 25px;
+            max-width: 350px;
+        }
+      
+    }
+    .btn{
+        margin-top: 20px;
+        margin-bottom: 15px;
+ 
+    }
+    &__cards{
+        @include a.breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:20px;
+        }
+    }
+   
+
+
+}

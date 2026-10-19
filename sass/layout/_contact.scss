@@ -1,0 +1,45 @@
+@use '../abstracts/abstracts' as a;
+
+.contact-map{
+    width: 100%;
+    height: 260px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    @include a.breakpoint(tablet){
+        display: flex;
+        justify-content: center;
+        height: 350px;
+        border-radius: 16px;
+    }
+}
+
+.contact-page{
+    &__title{
+        margin-bottom: 20px;
+        @include a.breakpoint(tablet){
+            text-align: center;
+        }
+    }
+}
+
+.contact-form{
+    @include a.breakpoint(tablet){
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__title{
+        margin-bottom: 15px;
+        @include a.breakpoint(tablet){
+            text-align: center;
+        }
+    }
+
+    &__description{
+        margin-bottom:20px;
+        @include a.breakpoint(tablet){
+            text-align: center;
+        }
+    }
+}
